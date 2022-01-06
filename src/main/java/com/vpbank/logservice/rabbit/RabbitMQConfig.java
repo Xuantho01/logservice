@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 
 //@Configuration
 public class RabbitMQConfig {
-    @Value("${rabbitmq.queue.mail}")
+    @Value("${rabbitmq.queue.log}")
     String queueMail;
 
     @Value("${rabbitmq.routing-key}")

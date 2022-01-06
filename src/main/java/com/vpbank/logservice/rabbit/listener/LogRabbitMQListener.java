@@ -8,7 +8,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 public class LogRabbitMQListener {
     private static final Logger logger = LoggerFactory.getLogger(LogRabbitMQListener.class);
 
-    @RabbitListener(queues = "${rabbitmq.queue.mail}")
+    @RabbitListener(queues = "${rabbitmq.queue.log}")
     public void saveLogToElasticsearch() {
     }
 }

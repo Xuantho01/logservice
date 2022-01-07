@@ -8,8 +8,9 @@ import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-//@Configuration
+@Configuration
 public class RabbitMQConfig {
     @Value("${rabbitmq.queue.log}")
     String queueLog;
@@ -31,7 +32,7 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    Binding logBinding(Queue log, DirectExchange exchange){
+    Binding binding(Queue log, DirectExchange exchange){
         return BindingBuilder.bind(log).to(exchange).with(routingKey);
     }
 

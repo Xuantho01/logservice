@@ -1,0 +1,15 @@
+{
+  "index": {
+    "mapping": {
+      "total_fields": {
+        "limit": "100000"
+      }
+    },
+    "number_of_shards": "10",
+    "number_of_replicas": "0",
+    "max_result_window": "1000000000",
+    "search.slowlog.threshold.query.info": "1ms",
+    "max_inner_result_window": "1000000000",
+    "mapping.total_fields.limit": 2000
+  }
+}
